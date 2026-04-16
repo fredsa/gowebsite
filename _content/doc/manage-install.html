@@ -123,10 +123,22 @@ These can be removed with <code>go clean -modcache</code>.
       <li>Remove <code>/usr/local/go</code>.
         <p>This is the default installation directory.</p>
       </li>
-      <li>Remove <code>/usr/local/go</code> from your <code>PATH</code> environment variable.
-        <p>Under Linux and FreeBSD, edit <code>/etc/profile</code> or <code>$HOME/.profile</code>.</p>
+      <li>
+        Remove <code>/usr/local/go</code> from your <code>PATH</code>
+        environment variable.
+        <p>
+          Under Linux and FreeBSD, edit <code>/etc/profile</code> or
+          <code>$HOME/.profile</code>.
+        </p>
       </li>
-      <li>If you manually added the Go bin directory (typically <code>$HOME/go/bin</code>) to your shell profile, for example by adding <code>export PATH="$PATH:$(go env GOPATH)/bin"</code>, remove that entry.</li>
+      <li>
+        Remove any Go related changes to your <code>PATH</code> environment
+        variable. This may include the default Go bin directory (typically
+        <code>$HOME/go/bin</code>, which you may have added using
+        <code>export PATH="$PATH:$(go env GOPATH)/bin"</code>), or other Go
+        related customziation.
+        <p><!-- for consistent spacing --></p>
+      </li>
       <li>
         Restart any open Terminal sessions for the changes to take effect.
         <p><!-- for consistent spacing --></p>
@@ -145,10 +157,21 @@ These can be removed with <code>go clean -modcache</code>.
       <li>Remove <code>/usr/local/go</code>.
         <p>This is the default installation directory.</p>
       </li>
-      <li>Remove <code>/usr/local/go</code> from your <code>PATH</code> environment variable.
-        <p>If you installed Go with the macOS package, do this by removing the <code>/etc/paths.d/go</code> file.</p>
+      <li>Remove <code>/usr/local/go</code> from your <code>PATH</code>
+        environment variable.
+        <p>
+          If you installed Go with the macOS package, do this by removing the
+          <code>/etc/paths.d/go</code> file.
+        </p>
       </li>
-      <li>If you manually added the Go bin directory (typically <code>$HOME/go/bin</code>) to your shell profile, for example by adding <code>export PATH="$PATH:$(go env GOPATH)/bin"</code>, remove that entry.</li>
+      <li>
+        Remove any Go related changes to your <code>PATH</code> environment
+        variable. This may include the default Go bin directory (typically
+        <code>$HOME/go/bin</code>, which you may have added using
+        <code>export PATH="$PATH:$(go env GOPATH)/bin"</code>), or other Go
+        related customziation.
+        <p><!-- for consistent spacing --></p>
+      </li>
       <li>
         Restart any open Terminal sessions for the changes to take effect.
         <p><!-- for consistent spacing --></p>

@@ -95,42 +95,52 @@
 		 </p>
       </li>
       <li>
-        Add /usr/local/go/bin to the <code>PATH</code> environment variable.
-        <p>
-          You can do this by adding the following line to your $HOME/.profile or
-          /etc/profile (for a system-wide installation):
-        </p>
-        <pre class="CopyPaste">
-          <span>export PATH=$PATH:/usr/local/go/bin</span>
-          <button aria-label="Copy and paste the code.">
-            <img class="CopyPaste-icon" src="/images/icons/copy-paste.svg" />
-            <img class="CopyPaste-icon CopyPaste-icon-dark" src="/images/icons/copy-paste-dark.svg" />
-          </button>
-        </pre>
-        <p>
-          <strong>Note:</strong> Changes made to a profile file may not apply
-          until the next time you log into your computer. To apply the changes
-          immediately, just run the shell commands directly or execute them from
-          the profile using a command such as
-          <code>source $HOME/.profile</code>.
-        </p>
-      </li>
-      <li>
-        To use tools installed via <code>go install</code>, you should also add the Go bin directory (typically <code>$HOME/go/bin</code>) to your <code>PATH</code>.
-        <p>
-          You can do this by adding the following line to your <code>$HOME/.profile</code> or <code>$HOME/.bashrc</code> file:
-        </p>
-        <pre class="CopyPaste">
-          <span>export PATH="$PATH:$(go env GOPATH)/bin"</span>
-          <button aria-label="Copy and paste the code.">
-            <img class="CopyPaste-icon" src="/images/icons/copy-paste.svg" />
-            <img class="CopyPaste-icon CopyPaste-icon-dark" src="/images/icons/copy-paste-dark.svg" />
-          </button>
-        </pre>
-      </li>
-      <li>
-        Restart any open Terminal sessions for the changes to take effect.
-        <p><!-- for consistent spacing --></p>
+        Update your <code>PATH</code>.
+        <ol>
+          <li>
+              Add <code>/usr/local/go/bin</code> to your
+              <code>PATH</code>.
+              <p>
+                You can do this by adding the following line to your
+                <code>$HOME/.profile</code> or <code>/etc/profile</code>
+                (for a system-wide installation):
+                <pre class="CopyPaste">
+                  <span>export PATH=$PATH:/usr/local/go/bin</span>
+                  <button aria-label="Copy and paste the code.">
+                    <img class="CopyPaste-icon" src="/images/icons/copy-paste.svg" />
+                    <img class="CopyPaste-icon CopyPaste-icon-dark" src="/images/icons/copy-paste-dark.svg" />
+                  </button>
+                </pre>
+              </p>
+          </li>
+          <li>
+            To use tools installed via <code>go install</code>, you should also
+            add the default Go bin directory (typically
+            <code>$HOME/go/bin</code>) to your <code>PATH</code>.
+            <p>
+              You can do this by adding the following line to your
+              <code>$HOME/.profile</code> or <code>$HOME/.bashrc</code> file:
+              <pre class="CopyPaste">
+                <span>export PATH="$PATH:$(go env GOPATH)/bin"</span>
+                <button aria-label="Copy and paste the code.">
+                  <img class="CopyPaste-icon" src="/images/icons/copy-paste.svg" />
+                  <img class="CopyPaste-icon CopyPaste-icon-dark" src="/images/icons/copy-paste-dark.svg" />
+                </button>
+              </pre>
+            </p>
+          </li>
+          <li>
+            Advanced users, for example those who use  Go in
+            <a href="https://go.dev/wiki/GOPATH">GOPATH mode</a>, may choose to
+            customize their <code>PATH</code> further. Such customizations are
+            beyond the scope of these instructions.
+            <p><!-- for consistent spacing --></p>
+          </li>
+          <li>
+            Restart any open Terminal sessions for the changes to take effect.
+            <p><!-- for consistent spacing --></p>
+          </li>
+        </ol>
       </li>
       <li>
         Verify that you've installed Go by opening a command prompt and typing
@@ -143,7 +153,9 @@
           </button>
         </pre>
       </li>
-      <li>Confirm that the command prints the installed version of Go.</li>
+      <li>
+        Confirm that the command prints the installed version of Go.
+      </li>
     </ol>
   </div>
   <div
@@ -158,31 +170,42 @@
         Open the package file you downloaded and follow the prompts to install
         Go.
         <p>
-          The package installs the Go distribution to /usr/local/go. The package
-          adds the /usr/local/go/bin directory to your
-          <code>PATH</code> environment variable by creating a <code>/etc/paths.d/go</code> file.
+          The package installs the Go distribution to
+          <code>/usr/local/go</code>. The package adds the
+          <code>/usr/local/go/bin</code> directory to your <code>PATH</code>
+          environment variable by creating a <code>/etc/paths.d/go</code> file.
         </p>
       </li>
       <li>
-        To use tools installed via <code>go install</code>, you should also add the Go bin directory (typically <code>$HOME/go/bin</code>) to your <code>PATH</code>.
+        To use tools installed via <code>go install</code>, you should also add
+        the default Go bin directory (typically <code>$HOME/go/bin</code>) to
+        your <code>PATH</code> environment variable.
         <p>
-          You can do this by adding the following line to your <code>~/.zshrc</code> or <code>~/.bash_profile</code> file:
+          You can do this by adding the following line to your
+          <code>$HOME/.profile</code> or <code>$HOME/.bashrc</code> file:
+          <pre class="CopyPaste">
+            <span>export PATH="$PATH:$(go env GOPATH)/bin"</span>
+            <button aria-label="Copy and paste the code.">
+              <img class="CopyPaste-icon" src="/images/icons/copy-paste.svg" />
+              <img class="CopyPaste-icon CopyPaste-icon-dark" src="/images/icons/copy-paste-dark.svg" />
+            </button>
+          </pre>
         </p>
-        <pre class="CopyPaste">
-          <span>export PATH="$PATH:$(go env GOPATH)/bin"</span>
-          <button aria-label="Copy and paste the code.">
-            <img class="CopyPaste-icon" src="/images/icons/copy-paste.svg" />
-            <img class="CopyPaste-icon CopyPaste-icon-dark" src="/images/icons/copy-paste-dark.svg" />
-          </button>
-        </pre>
+      </li>
+      <li>
+        Advanced users, for example those who use  Go in
+        <a href="https://go.dev/wiki/GOPATH">GOPATH mode</a>, may choose to
+        customize their <code>PATH</code> further. Such customizations are
+        beyond the scope of these instructions.
+        <p><!-- for consistent spacing --></p>
       </li>
       <li>
         Restart any open Terminal sessions for the changes to take effect.
         <p><!-- for consistent spacing --></p>
       </li>
       <li>
-        Verify that you've installed Go by opening a <strong>new</strong> Terminal session and typing
-        the following command:
+        Verify that you've installed Go by opening a <strong>new</strong>
+        Terminal session and typing the following command:
         <pre class="CopyPaste">
           <span>$ go version</span>
           <button aria-label="Copy and paste the code.">
