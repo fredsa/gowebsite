@@ -114,9 +114,10 @@
               </p>
           </li>
           <li>
-            To use tools installed via <code>go install</code>, you should also
-            add the default Go bin directory (typically
-            <code>$HOME/go/bin</code>) to your <code>PATH</code>.
+            <!-- TODO: Update to GOBIN once go.dev/issue/23439 is addressed. -->
+            Add <code>$HOME/go/bin</code> (the default Go bin path) to your
+            <code>PATH</code> environment variable to use tools installed via
+            <code>go install</code>.
             <p>
               You can do this by adding the following line to your
               <code>$HOME/.profile</code> or <code>$HOME/.bashrc</code> file:
@@ -128,13 +129,6 @@
                 </button>
               </pre>
             </p>
-          </li>
-          <li>
-            Advanced users, for example those who use  Go in
-            <a href="https://go.dev/wiki/GOPATH">GOPATH mode</a>, may choose to
-            customize their <code>PATH</code> further. Such customizations are
-            beyond the scope of these instructions.
-            <p><!-- for consistent spacing --></p>
           </li>
           <li>
             Restart any open Terminal sessions for the changes to take effect.
@@ -177,9 +171,10 @@
         </p>
       </li>
       <li>
-        To use tools installed via <code>go install</code>, you should also add
-        the default Go bin directory (typically <code>$HOME/go/bin</code>) to
-        your <code>PATH</code> environment variable.
+        <!-- TODO: Update to GOBIN once go.dev/issue/23439 is addressed. -->
+        Add <code>$HOME/go/bin</code> (the default Go bin path) to your
+        <code>PATH</code> environment variable to use tools installed via
+        <code>go install</code>.
         <p>
           You can do this by adding the following line to your
           <code>$HOME/.profile</code> or <code>$HOME/.bashrc</code> file:
@@ -191,13 +186,6 @@
             </button>
           </pre>
         </p>
-      </li>
-      <li>
-        Advanced users, for example those who use  Go in
-        <a href="https://go.dev/wiki/GOPATH">GOPATH mode</a>, may choose to
-        customize their <code>PATH</code> further. Such customizations are
-        beyond the scope of these instructions.
-        <p><!-- for consistent spacing --></p>
       </li>
       <li>
         Restart any open Terminal sessions for the changes to take effect.
